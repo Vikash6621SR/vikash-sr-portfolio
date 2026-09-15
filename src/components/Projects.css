@@ -1,0 +1,507 @@
+/* =========================================
+   PROJECTS SECTION
+========================================= */
+
+.projects-section {
+  position: relative;
+
+  padding: 120px 0;
+
+  background: #0a0a0a;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.projects-container {
+  width: min(1200px, calc(100% - 40px));
+
+  margin: 0 auto;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.projects-heading {
+  max-width: 700px;
+
+  margin-bottom: 60px;
+}
+
+/* =========================================
+   PROJECT GRID
+========================================= */
+
+.projects-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+/* =========================================
+   PROJECT CARD
+========================================= */
+
+.project-card {
+  position: relative;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 22px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.035),
+    rgba(255, 255, 255, 0.012)
+  );
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(22, 163, 74, 0.25);
+
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================================
+   PROJECT TOP
+========================================= */
+
+.project-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 22px 25px 0;
+}
+
+.project-number {
+  color: #22c55e;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.project-category {
+  color: #555555;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+}
+
+/* =========================================
+   PROJECT VISUAL
+========================================= */
+
+.project-visual {
+  position: relative;
+
+  height: 230px;
+
+  margin: 18px 18px 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  border-radius: 15px;
+
+  background:
+    radial-gradient(circle at center, rgba(22, 163, 74, 0.1), transparent 55%),
+    #0d0d0d;
+}
+
+/* =========================================
+   VISUAL GRID
+========================================= */
+
+.project-grid-pattern {
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+
+  background-size: 35px 35px;
+
+  opacity: 0.6;
+}
+
+/* =========================================
+   PROJECT LOGO
+========================================= */
+
+.project-logo {
+  position: relative;
+
+  width: 100px;
+  height: 100px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(22, 163, 74, 0.3);
+
+  border-radius: 25px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(22, 163, 74, 0.2),
+    rgba(22, 163, 74, 0.04)
+  );
+
+  color: #22c55e;
+
+  font-size: 27px;
+
+  font-weight: 700;
+
+  letter-spacing: -1px;
+
+  box-shadow: 0 0 60px rgba(22, 163, 74, 0.1);
+
+  z-index: 2;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.project-card:hover .project-logo {
+  transform: scale(1.08) rotate(-2deg);
+
+  box-shadow: 0 0 80px rgba(22, 163, 74, 0.17);
+}
+
+/* =========================================
+   CODE DECORATION
+========================================= */
+
+.project-code-decoration {
+  position: absolute;
+
+  right: 25px;
+  bottom: 18px;
+
+  color: rgba(255, 255, 255, 0.08);
+
+  font-family: monospace;
+
+  font-size: 35px;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.project-content {
+  padding: 27px 25px 25px;
+}
+
+.project-title-row {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.project-title-row h3 {
+  color: #eeeeee;
+
+  font-size: 24px;
+
+  font-weight: 600;
+
+  letter-spacing: -0.7px;
+}
+
+.project-title-row svg {
+  color: #555555;
+}
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.project-content > p {
+  min-height: 76px;
+
+  margin-top: 12px;
+
+  color: #777777;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+/* =========================================
+   PROJECT TAGS
+========================================= */
+
+.project-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 18px;
+}
+
+.project-tags span {
+  padding: 6px 9px;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 7px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  color: #858585;
+
+  font-size: 9px;
+
+  font-weight: 500;
+}
+
+/* =========================================
+   PROJECT LINKS
+========================================= */
+
+.project-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 24px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.project-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  min-height: 39px;
+
+  padding: 0 13px;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  border-radius: 9px;
+
+  color: #8a8a8a;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.project-link:hover {
+  color: #ffffff;
+
+  border-color: rgba(255, 255, 255, 0.2);
+
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.project-live-link {
+  color: #22c55e;
+
+  border-color: rgba(22, 163, 74, 0.18);
+
+  background: rgba(22, 163, 74, 0.05);
+}
+
+.project-live-link:hover {
+  color: #22c55e;
+
+  border-color: rgba(22, 163, 74, 0.35);
+
+  background: rgba(22, 163, 74, 0.09);
+}
+
+/* =========================================
+   HOVER ARROW
+========================================= */
+
+.project-arrow {
+  position: absolute;
+
+  top: 62px;
+  right: 25px;
+
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 10px;
+
+  background: rgba(8, 8, 8, 0.7);
+
+  color: #777777;
+
+  opacity: 0;
+
+  transform: translate(5px, 5px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.project-card:hover .project-arrow {
+  opacity: 1;
+
+  transform: translate(0, 0);
+
+  color: #22c55e;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.projects-footer {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-top: 45px;
+}
+
+.projects-footer-line {
+  flex: 1;
+
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.projects-footer span {
+  color: #444444;
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.5px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .projects-section {
+    padding: 90px 0;
+  }
+
+  .projects-container {
+    width: calc(100% - 30px);
+  }
+
+  .projects-heading {
+    margin-bottom: 40px;
+  }
+
+  .project-card {
+    border-radius: 18px;
+  }
+
+  .project-visual {
+    height: 200px;
+  }
+
+  .project-content {
+    padding: 24px 21px 21px;
+  }
+
+  .project-title-row h3 {
+    font-size: 21px;
+  }
+
+  .project-content > p {
+    min-height: auto;
+
+    font-size: 12px;
+  }
+
+  .project-links {
+    flex-wrap: wrap;
+  }
+
+  .project-link {
+    flex: 1;
+  }
+
+  .project-arrow {
+    display: none;
+  }
+}

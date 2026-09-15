@@ -1,0 +1,452 @@
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
+.about-section {
+  position: relative;
+
+  padding: 120px 0;
+
+  background: #080808;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.about-container {
+  width: min(1200px, calc(100% - 40px));
+
+  margin: 0 auto;
+}
+
+/* =========================================
+   SECTION HEADER
+========================================= */
+
+.section-heading {
+  max-width: 720px;
+
+  margin-bottom: 60px;
+}
+
+.section-label {
+  display: inline-block;
+
+  margin-bottom: 16px;
+
+  color: #22c55e;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  font-size: clamp(35px, 4vw, 52px);
+
+  line-height: 1.15;
+
+  letter-spacing: -2px;
+
+  font-weight: 700;
+}
+
+.section-heading h2 span {
+  color: #6b7280;
+}
+
+.section-heading p {
+  max-width: 600px;
+
+  margin-top: 18px;
+
+  color: #777777;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+/* =========================================
+   ABOUT GRID
+========================================= */
+
+.about-grid {
+  display: grid;
+
+  grid-template-columns: 1.25fr 0.75fr;
+
+  gap: 20px;
+}
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.about-main-card {
+  position: relative;
+
+  min-height: 420px;
+
+  padding: 40px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 22px;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(22, 163, 74, 0.08),
+      transparent 30%
+    ),
+    rgba(255, 255, 255, 0.025);
+
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.about-main-card:hover {
+  border-color: rgba(22, 163, 74, 0.22);
+
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   CARD NUMBER
+========================================= */
+
+.about-card-number {
+  position: absolute;
+
+  top: 25px;
+  right: 30px;
+
+  color: rgba(255, 255, 255, 0.06);
+
+  font-size: 55px;
+
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+/* =========================================
+   CARD ICON
+========================================= */
+
+.about-card-icon {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 30px;
+
+  border: 1px solid rgba(22, 163, 74, 0.18);
+
+  border-radius: 12px;
+
+  background: rgba(22, 163, 74, 0.08);
+
+  color: #22c55e;
+}
+
+/* =========================================
+   MAIN CARD TEXT
+========================================= */
+
+.about-main-card h3 {
+  max-width: 550px;
+
+  margin-bottom: 20px;
+
+  font-size: 29px;
+
+  line-height: 1.25;
+
+  letter-spacing: -1px;
+}
+
+.about-main-card h3 span {
+  color: #16a34a;
+}
+
+.about-main-card p {
+  max-width: 650px;
+
+  margin-bottom: 14px;
+
+  color: #858585;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+/* =========================================
+   ABOUT LINK
+========================================= */
+
+.about-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-top: 12px;
+
+  color: #d4d4d4;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  transition:
+    color 0.3s ease,
+    gap 0.3s ease;
+}
+
+.about-link:hover {
+  color: #22c55e;
+
+  gap: 11px;
+}
+
+/* =========================================
+   SIDE CARDS
+========================================= */
+
+.about-side {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.about-small-card {
+  flex: 1;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 18px;
+
+  padding: 28px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.about-small-card:hover {
+  transform: translateX(4px);
+
+  border-color: rgba(22, 163, 74, 0.2);
+
+  background: rgba(22, 163, 74, 0.035);
+}
+
+/* =========================================
+   SMALL CARD ICON
+========================================= */
+
+.small-card-icon {
+  min-width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(22, 163, 74, 0.15);
+
+  border-radius: 11px;
+
+  background: rgba(22, 163, 74, 0.06);
+
+  color: #22c55e;
+}
+
+/* =========================================
+   SMALL CARD TEXT
+========================================= */
+
+.about-small-card h4 {
+  margin-bottom: 5px;
+
+  color: #eeeeee;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.about-small-card p {
+  color: #707070;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+/* =========================================
+   FACTS
+========================================= */
+
+.about-facts {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  margin-top: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.02);
+
+  overflow: hidden;
+}
+
+.fact-item {
+  min-height: 105px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 5px;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.fact-item:last-child {
+  border-right: none;
+}
+
+.fact-item strong {
+  color: #eeeeee;
+
+  font-size: 15px;
+
+  font-weight: 600;
+}
+
+.fact-item span {
+  color: #626262;
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.7px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-main-card {
+    min-height: auto;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .about-section {
+    padding: 90px 0;
+  }
+
+  .about-container {
+    width: calc(100% - 30px);
+  }
+
+  .section-heading {
+    margin-bottom: 40px;
+  }
+
+  .section-heading h2 {
+    font-size: 35px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .section-heading p {
+    font-size: 14px;
+  }
+
+  .about-main-card {
+    padding: 28px;
+
+    border-radius: 18px;
+  }
+
+  .about-main-card h3 {
+    font-size: 24px;
+  }
+
+  .about-small-card {
+    padding: 22px;
+  }
+
+  .about-facts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fact-item {
+    min-height: 90px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .fact-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .fact-item:nth-child(3),
+  .fact-item:nth-child(4) {
+    border-bottom: none;
+  }
+
+  .fact-item:nth-child(3) {
+    border-right: 1px solid rgba(255, 255, 255, 0.07);
+  }
+}
