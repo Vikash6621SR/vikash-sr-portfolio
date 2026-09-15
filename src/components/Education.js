@@ -11,7 +11,10 @@ function Education() {
   return (
     <section className="education-section" id="education">
       <div className="education-container">
-        {/* Section Header */}
+        {/* =================================
+            SECTION HEADER
+        ================================== */}
+
         <div className="section-heading education-heading">
           <span className="section-label">
             <GraduationCap size={15} />
@@ -25,11 +28,81 @@ function Education() {
 
           <p>
             A strong academic foundation in computer science, combined with
-            practical development experience and continuous learning.
+            ongoing postgraduate education, practical development experience,
+            and continuous learning.
           </p>
         </div>
 
-        {/* Education Card */}
+        {/* =================================
+            MCA - ONGOING
+        ================================== */}
+
+        <div className="education-card education-card-current">
+          <div className="education-card-left">
+            <div className="education-icon">
+              <GraduationCap size={28} />
+            </div>
+
+            <div className="education-year">
+              2026
+              <span>—</span>
+              2028
+            </div>
+          </div>
+
+          <div className="education-content">
+            <div className="education-top">
+              <div>
+                <span className="education-level">POSTGRADUATE DEGREE</span>
+
+                <h3>Master of Computer Applications (MCA)</h3>
+
+                <p className="education-institute">SRM University</p>
+              </div>
+
+              <div className="education-status education-status-current">
+                <span className="status-dot"></span>
+                Ongoing
+              </div>
+            </div>
+
+            <div className="education-details">
+              <div className="education-detail">
+                <CalendarDays size={17} />
+
+                <span>2026 – 2028</span>
+              </div>
+
+              <div className="education-detail">
+                <MapPin size={17} />
+
+                <span>Online</span>
+              </div>
+            </div>
+
+            <div className="education-description">
+              <p>
+                Currently pursuing a Master of Computer Applications, continuing
+                to strengthen my knowledge in computer science, software
+                development, programming, and modern technologies.
+              </p>
+            </div>
+
+            <div className="education-footer">
+              <span>Currently Pursuing MCA</span>
+
+              <a href="#contact" className="education-link">
+                Get in touch
+                <ArrowUpRight size={16} />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* =================================
+            B.SC - COMPLETED
+        ================================== */}
+
         <div className="education-card">
           <div className="education-card-left">
             <div className="education-icon">
@@ -64,16 +137,19 @@ function Education() {
             <div className="education-details">
               <div className="education-detail">
                 <CalendarDays size={17} />
+
                 <span>2023 – 2026</span>
               </div>
 
               <div className="education-detail">
                 <MapPin size={17} />
+
                 <span>Coimbatore, Tamil Nadu</span>
               </div>
 
               <div className="education-detail">
                 <span className="cgpa-badge">7.0</span>
+
                 <span>CGPA</span>
               </div>
             </div>
