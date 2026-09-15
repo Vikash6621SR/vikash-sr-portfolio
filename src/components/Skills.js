@@ -4,9 +4,6 @@ import {
   Database,
   GitBranch,
   Globe,
-  Layers3,
-  ShieldCheck,
-  Smartphone,
   Users,
   Wrench,
 } from "lucide-react";
@@ -17,17 +14,17 @@ function Skills() {
   const skillCategories = [
     {
       number: "01",
-      icon: <Code2 size={21} />,
       title: "Programming",
-      description: "Languages I use to build software and solve problems.",
+      description: "Core programming languages and development fundamentals.",
+      icon: Code2,
       skills: ["Java", "Python", "C", "C++", "JavaScript"],
     },
 
     {
       number: "02",
-      icon: <Globe size={21} />,
       title: "Web & Backend",
-      description: "Technologies for creating modern web applications.",
+      description: "Technologies used to build modern web applications.",
+      icon: Globe,
       skills: [
         "HTML5",
         "CSS3",
@@ -40,17 +37,17 @@ function Skills() {
 
     {
       number: "03",
-      icon: <Database size={21} />,
       title: "Database",
-      description: "Working with relational databases and application data.",
+      description: "Database technology used for application development.",
+      icon: Database,
       skills: ["MySQL"],
     },
 
     {
       number: "04",
-      icon: <Brain size={21} />,
       title: "Technical Domains",
-      description: "Areas I have explored through learning and projects.",
+      description: "Areas of technical interest and hands-on exposure.",
+      icon: Brain,
       skills: [
         "Machine Learning",
         "Ethical Hacking",
@@ -61,17 +58,18 @@ function Skills() {
 
     {
       number: "05",
-      icon: <Wrench size={21} />,
       title: "Tools & Platforms",
-      description: "Tools used during development and testing.",
+      description: "Development tools and platforms used across projects.",
+      icon: GitBranch,
       skills: ["IntelliJ IDEA", "VS Code", "Postman", "XAMPP", "Git"],
     },
 
     {
       number: "06",
-      icon: <Users size={21} />,
       title: "Professional Strengths",
-      description: "Skills that support effective teamwork and execution.",
+      description:
+        "Personal strengths that support technical and team environments.",
+      icon: Users,
       skills: [
         "Quick Learning",
         "Teamwork",
@@ -85,10 +83,19 @@ function Skills() {
 
   return (
     <section className="skills-section" id="skills">
+      {/* Background */}
+      <div className="skills-glow"></div>
+
       <div className="skills-container">
-        {/* Section Header */}
-        <div className="section-heading skills-heading">
-          <span className="section-label">SKILLS & EXPERTISE</span>
+        {/* =================================
+            SECTION HEADER
+        ================================== */}
+
+        <div className="section-header">
+          <div className="section-label">
+            <span></span>
+            MY SKILLS
+          </div>
 
           <h2>
             Tools I use to turn
@@ -96,56 +103,63 @@ function Skills() {
           </h2>
 
           <p>
-            A growing technical toolkit built through academic learning,
-            internships, projects and hands-on development.
+            A combination of programming knowledge, development experience,
+            technical interests, and professional strengths built through
+            academics and practical work.
           </p>
         </div>
 
-        {/* Skills Grid */}
+        {/* =================================
+            SKILLS GRID
+        ================================== */}
+
         <div className="skills-grid">
-          {skillCategories.map((category) => (
-            <div className="skill-card" key={category.number}>
-              {/* Number */}
-              <span className="skill-number">{category.number}</span>
+          {skillCategories.map((category) => {
+            const Icon = category.icon;
 
-              {/* Icon */}
-              <div className="skill-icon">{category.icon}</div>
+            return (
+              <article className="skill-card" key={category.number}>
+                {/* Card Number */}
+                <div className="skill-card-number">{category.number}</div>
 
-              {/* Content */}
-              <div className="skill-card-content">
-                <h3>{category.title}</h3>
+                {/* Icon */}
+                <div className="skill-icon">
+                  <Icon size={22} />
+                </div>
 
-                <p>{category.description}</p>
-              </div>
+                {/* Content */}
+                <div className="skill-card-content">
+                  <h3>{category.title}</h3>
 
-              {/* Skills */}
-              <div className="skill-tags">
-                {category.skills.map((skill) => (
-                  <span className="skill-tag" key={skill}>
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
+                  <p>{category.description}</p>
+
+                  {/* Skill Tags */}
+                  <div className="skill-tags">
+                    {category.skills.map((skill) => (
+                      <span className="skill-tag" key={skill}>
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            );
+          })}
         </div>
 
-        {/* Bottom Highlight */}
-        <div className="skills-highlight">
-          <div className="highlight-icon">
-            <GitBranch size={21} />
+        {/* =================================
+            BOTTOM NOTE
+        ================================== */}
+
+        <div className="skills-bottom">
+          <div className="skills-bottom-icon">
+            <Wrench size={19} />
           </div>
 
-          <div className="highlight-content">
-            <strong>Always expanding my toolkit</strong>
-
-            <p>
-              I enjoy learning new technologies and applying them to practical
-              problems and real-world applications.
-            </p>
-          </div>
-
-          <div className="highlight-badge">Learning</div>
+          <p>
+            Always learning, experimenting, and improving my technical skill set
+            through projects and practical experience.
+          </p>
         </div>
       </div>
     </section>
