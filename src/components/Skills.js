@@ -2,7 +2,6 @@ import {
   Brain,
   Code2,
   Database,
-  GitBranch,
   Globe,
   Users,
   Wrench,

@@ -2,8 +2,6 @@ import {
   Briefcase,
   CalendarDays,
   MapPin,
-  Store,
-  Database,
   Code2,
 } from "lucide-react";
 

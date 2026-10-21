@@ -2,8 +2,6 @@ import {
   ArrowUpRight,
   Code2,
   Lightbulb,
-  Rocket,
-  Users,
   ChartNoAxesCombined,
 } from "lucide-react";
 
