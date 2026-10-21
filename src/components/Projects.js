@@ -1,8 +1,4 @@
-import {
-  ArrowUpRight,
-  Code2,
-  ExternalLink,
-} from "lucide-react";
+import { ArrowUpRight, Code2, ExternalLink } from "lucide-react";
 
 import { FaGithub } from "react-icons/fa";
 
@@ -12,30 +8,31 @@ function Projects() {
   const projects = [
     {
       number: "01",
-      category: "FULL STACK APPLICATION",
-      title: "FoodExpress",
+      category: "DATA ANALYTICS PROJECT",
+      title: "Telco Customer Churn Analysis",
       description:
-        "A complete food ordering platform with authentication, restaurant management, subscriptions, and a responsive user interface.",
+        "An end-to-end data analytics project analyzing 7,043 telecom customer records to understand churn patterns. Includes data cleaning and validation, SQL analysis, and an interactive Power BI dashboard to identify customer segments and retention opportunities.",
 
       technologies: [
-        "Java",
-        "Spring Boot",
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Bootstrap",
+        "Python",
+        "Pandas",
+        "NumPy",
+        "SQL",
         "MySQL",
+        "Power BI",
+        "Git",
+        "GitHub",
       ],
 
-      icon: "FE",
+      icon: "DA",
 
-      github: "https://github.com/Vikash6621SR/FoodExpress",
-      live: "#",
+      github: "https://github.com/Vikash6621SR/Customer-Churn-Analysis",
+      live: null,
     },
 
     {
       number: "02",
-      category: "WEB APPLICATION",
+      category: "FULL STACK WEB DEVELOPMENT PROJECT",
       title: "Finance Planner",
       description:
         "A responsive personal finance planner designed to help users manage income, expenses, and monthly budgets with interactive expense tracking and budget calculations.",
@@ -45,17 +42,13 @@ function Projects() {
       icon: "FP",
 
       github: "https://github.com/Vikash6621SR/Finance_Tracker",
-      live: "#",
+      live: null,
     },
   ];
 
   return (
     <section className="projects-section" id="projects">
       <div className="projects-container">
-        {/* =================================
-            SECTION HEADER
-        ================================= */}
-
         <div className="section-heading projects-heading">
           <span className="section-label">PROJECTS</span>
 
@@ -65,29 +58,27 @@ function Projects() {
           </h2>
 
           <p>
-            A selection of applications and projects where I applied my
-            technical skills to build practical solutions.
+            A selection of projects showcasing my skills in data analytics,
+            programming, and practical problem-solving.
           </p>
         </div>
 
-        {/* =================================
-            PROJECT GRID
-        ================================= */}
-
         <div className="projects-grid">
           {projects.map((project) => (
-            <article className="project-card" key={project.number}>
-              {/* Project Top */}
+            <article
+              className="project-card"
+              key={project.number}
+              data-category={project.category}
+            >
+              {/* Project Header */}
               <div className="project-top">
                 <span className="project-number">{project.number}</span>
-
                 <span className="project-category">{project.category}</span>
               </div>
 
               {/* Project Visual */}
               <div className="project-visual">
                 <div className="project-grid-pattern"></div>
-
                 <div className="project-logo">{project.icon}</div>
 
                 <div className="project-code-decoration">
@@ -95,11 +86,10 @@ function Projects() {
                 </div>
               </div>
 
-              {/* Project Content */}
+              {/* Project Details */}
               <div className="project-content">
                 <div className="project-title-row">
                   <h3>{project.title}</h3>
-
                   <Code2 size={18} />
                 </div>
 
@@ -112,25 +102,30 @@ function Projects() {
                   ))}
                 </div>
 
-                {/* Links */}
+                {/* Project Links */}
                 <div className="project-links">
                   <a
                     href={project.github}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="project-link"
                   >
                     <FaGithub size={16} />
                     GitHub
-                  </a>
-
-                  <a
-                    href={project.live}
-                    className="project-link project-live-link"
-                  >
-                    Live Demo
                     <ExternalLink size={15} />
                   </a>
+
+                  {project.live && project.live !== "#" && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link project-live-link"
+                    >
+                      Live Demo
+                      <ExternalLink size={15} />
+                    </a>
+                  )}
                 </div>
               </div>
 
@@ -141,10 +136,6 @@ function Projects() {
             </article>
           ))}
         </div>
-
-        {/* =================================
-            PROJECT FOOTER
-        ================================= */}
 
         <div className="projects-footer">
           <div className="projects-footer-line"></div>

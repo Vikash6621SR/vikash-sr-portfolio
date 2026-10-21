@@ -505,3 +505,28 @@
     display: none;
   }
 }
+
+/* =========================================
+   DATA ANALYTICS PROJECT ACCENT
+========================================= */
+
+.project-card[data-category="DATA ANALYTICS"] .project-visual {
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(59, 130, 246, 0.16),
+      transparent 60%
+    ),
+    #0d0d0d;
+}
+
+.project-card[data-category="DATA ANALYTICS"] .project-logo {
+  border-color: rgba(59, 130, 246, 0.35);
+  background: linear-gradient(
+    145deg,
+    rgba(59, 130, 246, 0.2),
+    rgba(59, 130, 246, 0.04)
+  );
+  color: #60a5fa;
+  box-shadow: 0 0 60px rgba(59, 130, 246, 0.1);
+}
