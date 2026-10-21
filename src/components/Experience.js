@@ -1,4 +1,11 @@
-import { Briefcase, CalendarDays, MapPin, Store } from "lucide-react";
+import {
+  Briefcase,
+  CalendarDays,
+  MapPin,
+  Store,
+  Database,
+  Code2,
+} from "lucide-react";
 
 import "./Experience.css";
 
@@ -6,35 +13,26 @@ function Experience() {
   return (
     <section className="experience-section" id="experience">
       <div className="experience-container">
-        {/* =================================
-            SECTION HEADER
-        ================================= */}
-
+        {/* SECTION HEADER */}
         <div className="section-heading experience-heading">
           <span className="section-label">EXPERIENCE</span>
 
           <h2>
-            Where I've been
-            <span> building and learning.</span>
+            Practical experience,
+            <span> continuous growth.</span>
           </h2>
 
           <p>
-            Practical experience gained through professional development work
-            and building a real-world e-commerce venture.
+            Professional software development experience and entrepreneurial
+            work that have strengthened my technical, analytical, and
+            problem-solving skills.
           </p>
         </div>
 
-        {/* =================================
-            TIMELINE
-        ================================= */}
-
+        {/* EXPERIENCE TIMELINE */}
         <div className="experience-timeline">
-          {/* =================================
-              EXPERIENCE 01
-          ================================= */}
-
+          {/* EXPERIENCE 01 */}
           <article className="experience-item">
-            {/* Timeline */}
             <div className="timeline-column">
               <div className="timeline-dot">
                 <Briefcase size={17} />
@@ -43,7 +41,6 @@ function Experience() {
               <div className="timeline-line"></div>
             </div>
 
-            {/* Content */}
             <div className="experience-card">
               <div className="experience-card-header">
                 <div>
@@ -51,135 +48,72 @@ function Experience() {
 
                   <h3>Full Stack Developer Intern</h3>
 
-                  <h4>Izeon Innovation</h4>
+                  <h4>Izeon Innovative Pvt Ltd</h4>
                 </div>
 
-                <span className="experience-current">Present</span>
+                <span className="experience-current">Completed</span>
               </div>
 
-              {/* Meta */}
               <div className="experience-meta">
                 <span>
                   <CalendarDays size={14} />
-                  May 2026 – Present
+                  March 2026 – August 2026
                 </span>
 
                 <span>
                   <MapPin size={14} />
-                  Chennai
+                  Chennai, India
                 </span>
               </div>
 
-              {/* Description */}
               <div className="experience-description">
                 <p>
-                  Developing and maintaining web applications using Java and
-                  Spring Boot as part of a professional development environment.
+                  Developed and maintained web applications using Java and
+                  Spring Boot, building REST APIs for server-side business logic
+                  and communication between frontend and backend services.
                 </p>
 
                 <p>
-                  Designing responsive user interfaces using HTML, CSS,
-                  Bootstrap, JavaScript and React.
+                  Designed responsive interfaces using React.js, JavaScript,
+                  HTML5, CSS3, and Bootstrap to support desktop and mobile
+                  screens.
+                </p>
+
+                <p>
+                  Integrated MySQL databases for CRUD operations, tested API
+                  endpoints using Postman, and managed source code with Git
+                  throughout the internship.
                 </p>
               </div>
 
-              {/* Technologies */}
               <div className="experience-technologies">
                 <span>Java</span>
                 <span>Spring Boot</span>
-                <span>React</span>
+                <span>REST APIs</span>
+                <span>React.js</span>
                 <span>JavaScript</span>
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>Bootstrap</span>
-              </div>
-            </div>
-          </article>
-
-          {/* =================================
-              EXPERIENCE 02
-          ================================= */}
-
-          <article className="experience-item">
-            {/* Timeline */}
-            <div className="timeline-column">
-              <div className="timeline-dot">
-                <Store size={17} />
-              </div>
-            </div>
-
-            {/* Content */}
-            <div className="experience-card">
-              <div className="experience-card-header">
-                <div>
-                  <span className="experience-number">02</span>
-
-                  <h3>Founder</h3>
-
-                  <h4>Sivam Silks</h4>
-                </div>
-
-                <span className="experience-current founder-badge">
-                  Ongoing
-                </span>
-              </div>
-
-              {/* Meta */}
-              <div className="experience-meta">
-                <span>
-                  <Store size={14} />
-                  Handloom Fabric E-commerce
-                </span>
-              </div>
-
-              {/* Description */}
-              <div className="experience-description">
-                <p>
-                  Founded and built a handloom fabric e-commerce venture serving
-                  men and women, managing the business from product sourcing
-                  through online sales.
-                </p>
-
-                <p>
-                  Developed the e-commerce website from scratch using HTML, CSS
-                  and JavaScript, including Razorpay payment integration.
-                </p>
-
-                <p>
-                  Implemented separate admin and customer login systems, product
-                  management, cart and wishlist functionality, and local data
-                  persistence.
-                </p>
-              </div>
-
-              {/* Business Skills */}
-              <div className="experience-technologies">
-                <span>E-commerce</span>
-                <span>JavaScript</span>
-                <span>Razorpay</span>
-                <span>Product Management</span>
-                <span>Customer Handling</span>
+                <span>MySQL</span>
+                <span>Postman</span>
+                <span>Git</span>
               </div>
             </div>
           </article>
         </div>
 
-        {/* =================================
-            EXPERIENCE FOOTER
-        ================================= */}
-
+        {/* EXPERIENCE FOOTER */}
         <div className="experience-note">
           <div className="experience-note-icon">
-            <Briefcase size={18} />
+            <Code2 size={18} />
           </div>
 
           <div>
-            <strong>Learning through real-world experience</strong>
+            <strong>Building skills through practical work</strong>
 
             <p>
-              From professional software development to entrepreneurship, each
-              experience has helped me strengthen both my technical and
-              practical skills.
+              My professional development experience and project work have
+              helped me strengthen my programming, database, API development,
+              and problem-solving skills. I am now looking for an entry-level
+              Data Analyst or Full Stack Developer opportunity.
             </p>
           </div>
         </div>

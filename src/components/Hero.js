@@ -1,84 +1,61 @@
 import { ArrowDown, ArrowRight, Download, Mail } from "lucide-react";
-
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-
 import "./Hero.css";
 
 function Hero() {
   return (
     <section className="hero" id="home">
-      {/* =================================
-          BACKGROUND DECORATION
-      ================================== */}
-
+      {/* BACKGROUND DECORATION */}
       <div className="hero-glow hero-glow-one"></div>
       <div className="hero-glow hero-glow-two"></div>
       <div className="hero-grid"></div>
 
-      {/* =================================
-          MAIN HERO CONTAINER
-      ================================== */}
-
       <div className="hero-container">
-        {/* =================================
-            LEFT CONTENT
-        ================================== */}
-
+        {/* LEFT CONTENT */}
         <div className="hero-content">
-          {/* Availability Status */}
           <div className="hero-status">
             <span className="status-dot"></span>
-
-            <span>Open to opportunities</span>
+            <span>Open to Entry-Level Opportunities</span>
           </div>
 
-          {/* Introduction */}
           <p className="hero-intro">Hello, I'm</p>
 
-          {/* Name */}
           <h1 className="hero-title">
             Vikash <span>SR</span>
           </h1>
 
-          {/* Professional Title */}
-          <h2 className="hero-role">Computer Science Graduate</h2>
+          <h2 className="hero-role">
+            Data Analyst <span>&</span> Full Stack Developer
+          </h2>
 
-          {/* Professional Description */}
           <p className="hero-description">
-            A versatile Computer Science graduate with hands-on experience in
-            full stack development, machine learning, ethical hacking, and
-            e-commerce. Currently working as a Full Stack Developer Intern,
-            building modern web applications using Java and Spring Boot.
+            Computer Science graduate and MCA student passionate about turning
+            data into actionable insights and building practical web
+            applications. I work with Python, SQL, MySQL, and Power BI for
+            analytics, alongside Java, Spring Boot, React, and REST APIs for
+            full stack development. I'm seeking an opportunity to apply my
+            skills, solve real-world problems, and grow as a professional.
           </p>
 
-          {/* =================================
-              ACTION BUTTONS
-          ================================== */}
-
+          {/* ACTION BUTTONS */}
           <div className="hero-actions">
-            {/* View Projects */}
             <a href="#projects" className="hero-primary-btn">
-              View My Work
+              View My Projects
               <ArrowRight size={18} />
             </a>
 
-            {/* Download Resume */}
             <a
-              href="/Vikash_SRResume.pdf"
+              href="/VikashS.R_Resume.pdf"
               className="hero-secondary-btn"
-              download
+              download="VikashS.R_Resume.pdf"
             >
               <Download size={17} />
               Download Resume
             </a>
           </div>
 
-          {/* =================================
-              SOCIAL LINKS
-          ================================== */}
-
+          {/* SOCIAL LINKS */}
           <div className="hero-socials">
-            {/* LinkedIn */}
             <a
               href="https://linkedin.com/in/vikash-sr-9a65a5280"
               target="_blank"
@@ -88,7 +65,6 @@ function Hero() {
               <FaLinkedinIn />
             </a>
 
-            {/* GitHub */}
             <a
               href="https://github.com/Vikash6621SR"
               target="_blank"
@@ -98,47 +74,28 @@ function Hero() {
               <FaGithub />
             </a>
 
-            {/* Email */}
             <a href="mailto:vikashsr412@gmail.com" aria-label="Email">
               <Mail size={19} />
             </a>
 
-            {/* Divider */}
             <span className="social-line"></span>
-
-            {/* Location */}
             <span className="hero-social-text">Coimbatore, Tamil Nadu</span>
           </div>
         </div>
 
-        {/* =================================
-            RIGHT SIDE VISUAL
-        ================================== */}
-
+        {/* RIGHT SIDE VISUAL */}
         <div className="hero-visual">
-          {/* Decorative Rings */}
           <div className="visual-ring visual-ring-one"></div>
-
           <div className="visual-ring visual-ring-two"></div>
 
-          {/* =================================
-              PROFILE CARD
-          ================================== */}
-
           <div className="profile-card">
-            {/* Card Header */}
             <div className="profile-card-top">
               <span></span>
               <span></span>
               <span></span>
             </div>
 
-            {/* =================================
-                PROFILE IMAGE AREA
-            ================================== */}
-
             <div className="profile-placeholder">
-              {/* Profile Photo */}
               <div className="profile-image-wrapper">
                 <img
                   src="/Vikashsr.png"
@@ -147,72 +104,49 @@ function Hero() {
                 />
               </div>
 
-              {/* Developer Code */}
               <div className="profile-code">
-                <span>&lt;developer</span>
-
+                <span>&lt;analyst_developer</span>
                 <span className="code-green">{' name="Vikash"'}</span>
-
                 <span>{" />"}</span>
               </div>
             </div>
 
-            {/* =================================
-                PROFILE CARD FOOTER
-            ================================== */}
-
             <div className="profile-card-bottom">
               <div>
                 <strong>2026</strong>
-
-                <span>Graduate</span>
+                <span>B.Sc Graduate</span>
               </div>
 
               <div>
-                <strong>5+</strong>
-
-                <span>Certifications</span>
+                <strong>MCA</strong>
+                <span>In Progress</span>
               </div>
             </div>
           </div>
 
-          {/* =================================
-              FLOATING CARD - FULL STACK
-          ================================== */}
-
+          {/* DATA ANALYTICS */}
           <div className="floating-card floating-card-one">
-            <div className="floating-icon">{"</>"}</div>
-
+            <div className="floating-icon">SQL</div>
             <div>
-              <strong>Full Stack</strong>
-
-              <span>Developer Intern</span>
+              <strong>Data Analytics</strong>
+              <span>Python · Power BI</span>
             </div>
           </div>
 
-          {/* =================================
-              FLOATING CARD - COMPUTER SCIENCE
-          ================================== */}
-
+          {/* FULL STACK DEVELOPMENT */}
           <div className="floating-card floating-card-two">
-            <div className="floating-icon ai-icon">AI</div>
-
+            <div className="floating-icon ai-icon">{"</>"}</div>
             <div>
-              <strong>Computer Science</strong>
-
-              <span>Graduate</span>
+              <strong>Full Stack</strong>
+              <span>Java · React</span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* =================================
-          SCROLL INDICATOR
-      ================================== */}
-
+      {/* SCROLL INDICATOR */}
       <a href="#about" className="scroll-indicator">
         <span>Scroll to explore</span>
-
         <ArrowDown size={16} />
       </a>
     </section>

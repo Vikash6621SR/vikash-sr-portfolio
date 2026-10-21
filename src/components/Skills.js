@@ -6,6 +6,7 @@ import {
   Globe,
   Users,
   Wrench,
+  ChartNoAxesCombined,
 } from "lucide-react";
 
 import "./Skills.css";
@@ -14,69 +15,107 @@ function Skills() {
   const skillCategories = [
     {
       number: "01",
-      title: "Programming",
-      description: "Core programming languages and development fundamentals.",
-      icon: Code2,
-      skills: ["Java", "Python", "C", "C++", "JavaScript"],
+      title: "Data Analytics",
+      description:
+        "Tools and techniques for analyzing data and communicating business insights.",
+      icon: ChartNoAxesCombined,
+      skills: [
+        "Python",
+        "Pandas",
+        "SQL",
+        "MySQL",
+        "Power BI",
+        "DAX",
+        "Data Cleaning",
+        "Data Visualization",
+        "KPI Reporting",
+      ],
     },
 
     {
       number: "02",
-      title: "Web & Backend",
-      description: "Technologies used to build modern web applications.",
-      icon: Globe,
+      title: "Programming",
+      description:
+        "Programming languages used for application development and analysis.",
+      icon: Code2,
       skills: [
-        "HTML5",
-        "CSS3",
-        "Bootstrap",
-        "React.js",
-        "Spring Boot",
-        "REST APIs",
+        "Java",
+        "Python",
+        "JavaScript",
+        "C",
+        "C++",
+        "SQL",
+        "Object-Oriented Programming",
       ],
     },
 
     {
       number: "03",
-      title: "Database",
-      description: "Database technology used for application development.",
-      icon: Database,
-      skills: ["MySQL"],
-    },
-
-    {
-      number: "04",
-      title: "Technical Domains",
-      description: "Areas of technical interest and hands-on exposure.",
-      icon: Brain,
+      title: "Frontend Development",
+      description: "Building responsive and user-friendly web interfaces.",
+      icon: Globe,
       skills: [
-        "Machine Learning",
-        "Ethical Hacking",
-        "Mobile Application Development",
+        "HTML5",
+        "CSS3",
+        "JavaScript ES6+",
+        "React.js",
+        "Bootstrap",
         "Responsive Web Design",
       ],
     },
 
     {
+      number: "04",
+      title: "Backend Development",
+      description:
+        "Developing server-side applications and connecting services through APIs.",
+      icon: Brain,
+      skills: [
+        "Java",
+        "Spring Boot",
+        "REST APIs",
+        "Spring Data JPA",
+        "Hibernate",
+        "MVC Architecture",
+        "Microservices Fundamentals",
+      ],
+    },
+
+    {
       number: "05",
-      title: "Tools & Platforms",
-      description: "Development tools and platforms used across projects.",
-      icon: GitBranch,
-      skills: ["IntelliJ IDEA", "VS Code", "Postman", "XAMPP", "Git"],
+      title: "Databases & Tools",
+      description: "Working with relational databases and development tools.",
+      icon: Database,
+      skills: [
+        "MySQL",
+        "SQL Joins",
+        "Subqueries",
+        "Database Design",
+        "Git",
+        "GitHub",
+        "Postman",
+        "Maven",
+        "Docker",
+        "VS Code",
+        "IntelliJ IDEA",
+      ],
     },
 
     {
       number: "06",
       title: "Professional Strengths",
       description:
-        "Personal strengths that support technical and team environments.",
+        "Skills that support collaboration, analytical work, and continuous improvement.",
       icon: Users,
       skills: [
-        "Quick Learning",
+        "Analytical Thinking",
+        "Problem Solving",
         "Teamwork",
         "Communication",
-        "Problem Solving",
         "Leadership",
-        "Discipline",
+        "Time Management",
+        "Adaptability",
+        "Quick Learning",
       ],
     },
   ];
@@ -87,53 +126,43 @@ function Skills() {
       <div className="skills-glow"></div>
 
       <div className="skills-container">
-        {/* =================================
-            SECTION HEADER
-        ================================== */}
-
+        {/* SECTION HEADER */}
         <div className="section-header">
           <div className="section-label">
             <span></span>
-            MY SKILLS
+            TECHNICAL SKILLS
           </div>
 
           <h2>
-            Tools I use to turn
-            <span> ideas into reality.</span>
+            Data, development,
+            <span> and problem solving.</span>
           </h2>
 
           <p>
-            A combination of programming knowledge, development experience,
-            technical interests, and professional strengths built through
-            academics and practical work.
+            My technical skill set combines data analytics, programming,
+            frontend and backend development, database management, and tools
+            used to build and deliver practical solutions.
           </p>
         </div>
 
-        {/* =================================
-            SKILLS GRID
-        ================================== */}
-
+        {/* SKILLS GRID */}
         <div className="skills-grid">
           {skillCategories.map((category) => {
             const Icon = category.icon;
 
             return (
               <article className="skill-card" key={category.number}>
-                {/* Card Number */}
                 <div className="skill-card-number">{category.number}</div>
 
-                {/* Icon */}
                 <div className="skill-icon">
                   <Icon size={22} />
                 </div>
 
-                {/* Content */}
                 <div className="skill-card-content">
                   <h3>{category.title}</h3>
 
                   <p>{category.description}</p>
 
-                  {/* Skill Tags */}
                   <div className="skill-tags">
                     {category.skills.map((skill) => (
                       <span className="skill-tag" key={skill}>
@@ -147,18 +176,16 @@ function Skills() {
           })}
         </div>
 
-        {/* =================================
-            BOTTOM NOTE
-        ================================== */}
-
+        {/* BOTTOM NOTE */}
         <div className="skills-bottom">
           <div className="skills-bottom-icon">
             <Wrench size={19} />
           </div>
 
           <p>
-            Always learning, experimenting, and improving my technical skill set
-            through projects and practical experience.
+            Continuously strengthening my analytics and software development
+            skills through hands-on projects, practical problem solving, and
+            ongoing learning.
           </p>
         </div>
       </div>

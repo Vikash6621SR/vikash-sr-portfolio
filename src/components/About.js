@@ -1,4 +1,11 @@
-import { ArrowUpRight, Code2, Lightbulb, Rocket, Users } from "lucide-react";
+import {
+  ArrowUpRight,
+  Code2,
+  Lightbulb,
+  Rocket,
+  Users,
+  ChartNoAxesCombined,
+} from "lucide-react";
 
 import "./About.css";
 
@@ -6,28 +13,23 @@ function About() {
   return (
     <section className="about-section" id="about">
       <div className="about-container">
-        {/* =================================
-            SECTION HEADER
-        ================================= */}
-
+        {/* SECTION HEADER */}
         <div className="section-heading">
           <span className="section-label">ABOUT ME</span>
 
           <h2>
-            Building with curiosity,
-            <span> growing with purpose.</span>
+            Turning data into insights,
+            <span> building with code.</span>
           </h2>
 
           <p>
-            A Computer Science graduate passionate about technology,
-            problem-solving and building useful digital experiences.
+            Computer Science graduate and aspiring Data Analyst & Full Stack
+            Developer passionate about solving real-world problems through data
+            and technology.
           </p>
         </div>
 
-        {/* =================================
-            MAIN ABOUT CONTENT
-        ================================= */}
-
+        {/* MAIN ABOUT CONTENT */}
         <div className="about-grid">
           {/* LEFT SIDE */}
           <div className="about-main-card">
@@ -38,20 +40,29 @@ function About() {
             </div>
 
             <h3>
-              A developer who enjoys
-              <span> building things.</span>
+              Analytical thinking meets
+              <span> software development.</span>
             </h3>
 
             <p>
-              I'm a recent Computer Science graduate with hands-on exposure to
-              full stack development, machine learning, ethical hacking and
-              responsive web design.
+              I'm a B.Sc Computer Science graduate currently pursuing my MCA.
+              I'm looking for an entry-level opportunity in Data Analytics or
+              Full Stack Development where I can apply my skills and continue
+              learning.
             </p>
 
             <p>
-              My development experience includes working with Java, Spring Boot,
-              React, JavaScript, Python, MySQL and REST APIs. I enjoy learning
-              new technologies and turning ideas into practical applications.
+              In data analytics, I work with Python, Pandas, SQL, MySQL, and
+              Power BI to clean datasets, analyze trends, track KPIs, and create
+              meaningful visualizations. My Telco Customer Churn Analysis
+              project demonstrates how I turn customer data into actionable
+              insights.
+            </p>
+
+            <p>
+              In development, I work with Java, Spring Boot, React, JavaScript,
+              MySQL, and REST APIs to build responsive web applications and
+              database-driven solutions.
             </p>
 
             <a href="#projects" className="about-link">
@@ -65,15 +76,15 @@ function About() {
             {/* Card 1 */}
             <div className="about-small-card">
               <div className="small-card-icon">
-                <Rocket size={20} />
+                <ChartNoAxesCombined size={20} />
               </div>
 
               <div>
-                <h4>Always Learning</h4>
+                <h4>Data-Driven Thinking</h4>
 
                 <p>
-                  Continuously exploring new technologies, development practices
-                  and AI.
+                  Exploring datasets, identifying patterns, and communicating
+                  insights through SQL, Python, and Power BI.
                 </p>
               </div>
             </div>
@@ -81,14 +92,15 @@ function About() {
             {/* Card 2 */}
             <div className="about-small-card">
               <div className="small-card-icon">
-                <Lightbulb size={20} />
+                <Code2 size={20} />
               </div>
 
               <div>
-                <h4>Problem Solving</h4>
+                <h4>Full Stack Development</h4>
 
                 <p>
-                  Enjoy breaking down problems and creating practical solutions.
+                  Building web applications using React, Java, Spring Boot, REST
+                  APIs, and MySQL.
                 </p>
               </div>
             </div>
@@ -96,48 +108,41 @@ function About() {
             {/* Card 3 */}
             <div className="about-small-card">
               <div className="small-card-icon">
-                <Users size={20} />
+                <Lightbulb size={20} />
               </div>
 
               <div>
-                <h4>Team & Leadership</h4>
+                <h4>Continuous Learning</h4>
 
                 <p>
-                  Strong communication, teamwork, leadership and disciplined
-                  work ethic.
+                  Improving technical skills, solving practical problems, and
+                  learning industry best practices.
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* =================================
-            QUICK FACTS
-        ================================= */}
-
+        {/* QUICK FACTS */}
         <div className="about-facts">
           <div className="fact-item">
             <strong>2026</strong>
-
-            <span>B.Sc Graduate</span>
+            <span>B.Sc Computer Science</span>
           </div>
 
           <div className="fact-item">
-            <strong>Full Stack</strong>
-
-            <span>Development</span>
+            <strong>MCA</strong>
+            <span>Expected 2028</span>
           </div>
 
           <div className="fact-item">
-            <strong>AI / ML</strong>
-
-            <span>Technical Interest</span>
+            <strong>Python & SQL</strong>
+            <span>Data Analytics</span>
           </div>
 
           <div className="fact-item">
-            <strong>NCC 'C'</strong>
-
-            <span>Grade B</span>
+            <strong>Java & React</strong>
+            <span>Full Stack Development</span>
           </div>
         </div>
       </div>

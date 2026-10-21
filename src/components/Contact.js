@@ -15,29 +15,28 @@ function Contact() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const form = event.target;
+    const form = event.currentTarget;
 
-    const name = form.name.value;
-    const email = form.email.value;
-    const message = form.message.value;
+    const name = form.elements.name.value.trim();
+    const email = form.elements.email.value.trim();
+    const subjectText = form.elements.subject.value.trim();
+    const message = form.elements.message.value.trim();
 
     const subject = encodeURIComponent(
-      `Portfolio Contact from ${name}`
+      subjectText || `Portfolio Contact from ${name}`,
     );
 
     const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
     );
 
-    window.location.href =
-      `mailto:vikashsr412@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:vikashsr412@gmail.com?subject=${subject}&body=${body}`;
   };
 
   return (
     <section className="contact-section" id="contact">
       <div className="contact-container">
-
-        {/* Section Header */}
+        {/* SECTION HEADER */}
         <div className="section-heading contact-heading">
           <span className="section-label">
             <Mail size={15} />
@@ -50,29 +49,26 @@ function Contact() {
           </h2>
 
           <p>
-            I'm open to opportunities where I can learn, contribute,
-            and grow. If you have a project, role, or idea you'd like
-            to discuss, feel free to reach out.
+            I'm open to opportunities where I can learn, contribute, and grow.
+            If you have a project, role, or idea you'd like to discuss, feel
+            free to reach out.
           </p>
         </div>
 
         <div className="contact-grid">
-
-          {/* Contact Information */}
+          {/* CONTACT INFORMATION */}
           <div className="contact-info">
-
             <div className="contact-info-header">
               <span>GET IN TOUCH</span>
               <h3>Have an opportunity?</h3>
               <p>
-                I'm always interested in connecting with people,
-                teams, and organizations working on interesting
-                technology and business problems.
+                I'm always interested in connecting with people, teams, and
+                organizations working on interesting technology and business
+                problems.
               </p>
             </div>
 
             <div className="contact-details">
-
               <a
                 href="mailto:vikashsr412@gmail.com"
                 className="contact-detail-card"
@@ -89,10 +85,7 @@ function Contact() {
                 <ArrowUpRight size={17} />
               </a>
 
-              <a
-                href="tel:+918778114749"
-                className="contact-detail-card"
-              >
+              <a href="tel:+918778114749" className="contact-detail-card">
                 <div className="contact-detail-icon">
                   <Phone size={19} />
                 </div>
@@ -115,12 +108,10 @@ function Contact() {
                   <strong>Coimbatore, Tamil Nadu, India</strong>
                 </div>
               </div>
-
             </div>
 
-            {/* Social Links */}
+            {/* SOCIAL LINKS */}
             <div className="contact-socials">
-
               <a
                 href="https://linkedin.com/in/vikash-sr-9a65a5280"
                 target="_blank"
@@ -131,7 +122,7 @@ function Contact() {
               </a>
 
               <a
-                href="https://github.com/"
+                href="https://github.com/Vikash6621SR"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="GitHub"
@@ -139,48 +130,37 @@ function Contact() {
                 <FaGithub />
               </a>
 
-              <a
-                href="mailto:vikashsr412@gmail.com"
-                aria-label="Email"
-              >
+              <a href="mailto:vikashsr412@gmail.com" aria-label="Email">
                 <Mail size={18} />
               </a>
-
             </div>
 
+            {/* RESUME DOWNLOAD */}
             <a
-              href="/Vikash_SRResume.pdf"
+              href="/VikashS.R_Resume.pdf"
               className="contact-resume-btn"
-              download
+              download="VikashS.R_Resume.pdf"
             >
               <Download size={17} />
               Download Resume
             </a>
-
           </div>
 
-          {/* Contact Form */}
+          {/* CONTACT FORM */}
           <div className="contact-form-wrapper">
-
             <div className="contact-form-top">
               <span>START A CONVERSATION</span>
+
               <div className="contact-form-status">
                 <span></span>
                 Available
               </div>
             </div>
 
-            <form
-              className="contact-form"
-              onSubmit={handleSubmit}
-            >
-
+            <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-row">
-
                 <div className="form-group">
-                  <label htmlFor="name">
-                    Your Name
-                  </label>
+                  <label htmlFor="name">Your Name</label>
 
                   <input
                     type="text"
@@ -192,9 +172,7 @@ function Contact() {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="email">
-                    Email Address
-                  </label>
+                  <label htmlFor="email">Email Address</label>
 
                   <input
                     type="email"
@@ -204,13 +182,10 @@ function Contact() {
                     required
                   />
                 </div>
-
               </div>
 
               <div className="form-group">
-                <label htmlFor="subject">
-                  Subject
-                </label>
+                <label htmlFor="subject">Subject</label>
 
                 <input
                   type="text"
@@ -221,9 +196,7 @@ function Contact() {
               </div>
 
               <div className="form-group">
-                <label htmlFor="message">
-                  Message
-                </label>
+                <label htmlFor="message">Message</label>
 
                 <textarea
                   id="message"
@@ -234,25 +207,18 @@ function Contact() {
                 ></textarea>
               </div>
 
-              <button
-                type="submit"
-                className="contact-submit-btn"
-              >
+              <button type="submit" className="contact-submit-btn">
                 Send Message
                 <Send size={17} />
               </button>
 
               <p className="form-note">
-                Clicking "Send Message" will open your default email
-                application with the message prepared.
+                Clicking "Send Message" opens your default email application
+                with the message prepared.
               </p>
-
             </form>
-
           </div>
-
         </div>
-
       </div>
     </section>
   );
